@@ -21,42 +21,64 @@
   </head>
 
   <body>
+  
     <Section class="currentWeather">
       <div class="container-sm">
-        <div class = "row align-items-center">
-          <div class="col" class = "citySearch">
-            <header>
-              <h2 class="display-6">What's the weather like in......
-                <form id = "searchForm">
-                  <input type="text" name = "cityName" placeholder = "Location" id="location">
-                  <input type ="button" class="btn-default btn-sm" value = "Search" id=searchLocation> 
-                </form> 
-              </h2>
-              <img src="./assets/images/sun_cloud.png" alt="Sun and Clouds">
-            </header>
-          </div>
-          <div class="col">
-            <div class = "resultContainer">
-              <div class="dtContainer">
-                <p id="dtToday">Date</p>
-              </div>  
-              <div class="resultBox">
-                <p id="weatherCondition">  Weather Conditions: </p>
-                <p id="weatherTemperature"> Temperature: </p>
-                <p id="weatherHumidity"> Humidity: </p>
-                <p id="weatherWindspeed"> Wind Speed: </p>
-                <p id="weatherIndex"> UV Index: </p>
+        <div class = "row align-items-top">
+          
+          <img src="./assets/images/sun_cloud.png" alt="Sun and Clouds">
+         
+         
+          <div class="col-lg-6" class = "citySearch">
+          
+            <h4 class="display-6">What's the weather like in...... 
+
+            <div class="col-lg-6">
+              <input type="text" class="form-control" placeholder="Location..."name = "cityName" id="location">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" id="searchLocation" type="button"><span i class = "fa fa-search"></span>  Search  </button>
+              </span>
+            </div>
+            </h4>
+            <div class="col-lg-6">
+              <div class = "resultContainer">
+                <div class="dtContainer">
+                  <p id="dtToday">Date</p>
+                </div>  
+                <div class="resultBox">
+                  <p id="weatherCondition"> Weather Conditions: </p>
+                  <p id="weatherTemperature"> Temperature: </p>
+                  <p id="weatherHumidity"> Humidity: </p>
+                  <p id="weatherWindspeed"> Wind Speed: </p>
+                  <p id="weatherIndex"> UV Index: </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col">
+
+          <div class="col-lg-2">
             <div class = cityLinks>
-              <h4>Quick Links......</h4>
+              <h4 id="localDate"></h4>
+              <h4>......Quick Links......</h4>
+              <h6>Saved: Last 10 Searches</h6>
               <div id = "addCityLink">
-                  <button type="button" id="cityLink" class="btn btn-link" id="cityName"></button>
+                <div class = "list-group">
+                  <button type="button"  class="btn btn-link" id="linkcityName0"></button>
+                  <button type="button"  class="btn btn-link" id="linkcityName1"></button>
+                  <button type="button"  class="btn btn-link" id="linkcityName2"></button>
+                  <button type="button"  class="btn btn-link" id="linkcityName3"></button>
+                  <button type="button"  class="btn btn-link" id="linkcityName4"></button>
+                  <button type="button"  class="btn btn-link" id="linkcityName5"></button>
+                  <button type="button"  class="btn btn-link" id="linkcityName6"></button>
+                  <button type="button"  class="btn btn-link" id="linkcityName7"></button>
+                  <button type="button"  class="btn btn-link" id="linkcityName8"></button>
+                  <button type="button"  class="btn btn-link" id="linkcityName9"></button>
+                </div> 
               </div>
             </div>  
-          </div>
+          
+          
+        </div>
         </div>
       </div>
     </section>
@@ -70,14 +92,70 @@
           <div class = "col-md-2">
             <div class="resultContainer">
               <div class="dtContainer">
-                <p id="dtToday">Date</p>
+                <p id="dtForecast1">Date</p>
               </div>  
               <div class="resultBox">
-                <p id="weatherCondition">  Weather Conditions: </p>
-                <p id="weatherTemperature"> Temperature: </p>
-                <p id="weatherHumidity"> Humidity: </p>
-                <p id="weatherWindspeed"> Wind Speed: </p>
-                <p id="weatherIndex"> UV Index: </p>
+                <p id="fcweatherCondition1">  Weather Conditions: </p>
+                <p id="fcweatherTemperature1"> Temperature: </p>
+                <p id="fcweatherHumidity1"> Humidity: </p>
+                <p id="fcweatherWindspeed1"> Wind Speed: </p>
+                <p id="fcweatherIndex1"> UV Index: </p>
+              </div>
+            </div>
+          </div>
+          <div class = "col-md-2">
+            <div class="resultContainer">
+              <div class="dtContainer">
+                <p id="dtForecast2">Date</p>
+              </div>  
+              <div class="resultBox">
+                <p id="fcweatherCondition2">  Weather Conditions: </p>
+                <p id="fcweatherTemperature2"> Temperature: </p>
+                <p id="fcweatherHumidity2"> Humidity: </p>
+                <p id="fcweatherWindspeed2"> Wind Speed: </p>
+                <p id="fcweatherIndex2"> UV Index: </p>
+              </div>
+            </div>
+          </div>
+          <div class = "col-md-2">
+            <div class="resultContainer">
+              <div class="dtContainer">
+                <p id="dtForecast3">Date</p>
+              </div>  
+              <div class="resultBox">
+                <p id="fcweatherCondition3">  Weather Conditions: </p>
+                <p id="fcweatherTemperature3"> Temperature: </p>
+                <p id="fcweatherHumidity3"> Humidity: </p>
+                <p id="fcweatherWindspeed3"> Wind Speed: </p>
+                <p id="fcweatherIndex3"> UV Index: </p>
+              </div>
+            </div>
+          </div>
+          <div class = "col-md-2">
+            <div class="resultContainer">
+              <div class="dtContainer">
+                <p id="dtForecast4">Date</p>
+              </div>  
+              <div class="resultBox">
+                <p id="fcweatherCondition4">  Weather Conditions: </p>
+                <p id="fcweatherTemperature4"> Temperature: </p>
+                <p id="fcweatherHumidity4"> Humidity: </p>
+                <p id="fcweatherWindspeed4"> Wind Speed: </p>
+                <p id="fcweatherIndex4"> UV Index: </p>
+              </div>
+            </div>
+          </div>
+          <div class = "col-md-2">
+            <div class="resultContainer">
+              <div class="dtContainer">
+                <p id="dtForecast5">Date</p>
+              </div>  
+              <div class="resultBox">
+                <p id="fcweatherCondition5">  Weather Conditions: </p>
+                <p id="fcweatherTemperature5"> Temperature: </p>
+                <p id="fcweatherHumidity5"> Humidity: </p>
+                <p id="fcweatherWindspeed5"> Wind Speed: </p>
+                <p id="fcweatherIndex5"> UV Index: </p>
               </div>
             </div>
           </div>
