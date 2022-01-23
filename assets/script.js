@@ -13,6 +13,8 @@ var City6 = document.querySelector("#linkcityName6");
 var City7 = document.querySelector("#linkcityName7");
 var City8 = document.querySelector("#linkcityName8");
 var City9 = document.querySelector("#linkcityName9");
+var fcbtnEl = document.querySelector("#dayforecast");
+var viewEl = document.querySelector("#view");
 var today = moment();
 var saveCity = "";
 var param = "";
@@ -26,6 +28,8 @@ var dayicon = "";
 var dayweather = {
                         // http://openweathermap.org/img/wn/10d@2x.png
     day: [],           // from open api daily date (unix)
+    zone: [],            // get timezone
+    offset: [],         // timezone offset
     id: [],           // from open api daily weather group (for icon selection)
     main: [],         // from open api daily main weather category
     conditions: [],    // from open api daily weather description (0-6)
@@ -42,8 +46,8 @@ var dayweather = {
 $(document).ready(function()
 {
 
-    $("#localDate").text(today.format("dddd, MMM Do, YYYY"));
-   
+    $("#localDate").text(today.format("dddd, MMM Do, YYYY HH:mm"));
+    $(".view").hide();
     loadSavedCity();
     displaySavedCity();
 
@@ -57,7 +61,7 @@ $(document).ready(function()
         })
         .then(data => { 
             dayweather.longitude[0] = data ['coord']['lon'];
-            dayweather.latitude[0] = data ['coord']['lat']; 
+            dayweather.latitude[0] = data ['coord']['lat'];
             console.log(dayweather.longitude[0]);
             console.log(dayweather.latitude[0]);
             var cityLat = dayweather.latitude[0];
@@ -74,6 +78,8 @@ $(document).ready(function()
                 for( var i=0; i < 6; i++){
 
                     dayweather.day[i] = data ['daily'][i]['dt'];
+                    dayweather.zone[i] = data ['timezone'];
+                    dayweather.offset[i] = data ['timezone_offset'];
                     dayweather.temperature[i] = data ['daily'][i]['temp']['max'];
                     dayweather.humidity[i] = data['daily'][i]['humidity'];
                     dayweather.UVindex[i] = data ['daily'][i]['uvi'];
@@ -98,6 +104,8 @@ $(document).ready(function()
 
     }
 
+    
+
     function displayWeather()
     
     {
@@ -105,8 +113,9 @@ $(document).ready(function()
         var milliseconds = unixTimestamp * 1000;
         var localday = new Date(milliseconds);
         var displayday = localday.toLocaleString();
-       
-        $("#dtToday").text(innerLocation + " ....  " + displayday);
+        var fetchdate = displayday.split(' ')[0];
+        console.log("display", displayday);
+        $("#dtToday").text(innerLocation + " ....  " + fetchdate);
         console.log("display today's weather",displayday);
         var weatherIcon = dayweather.icon[0];
         $("#weatherCondition").text("Weather Conditions: " + dayweather.conditions[0]).append(`<img src = "http://openweathermap.org/img/wn/${weatherIcon}.png">`);
@@ -151,7 +160,6 @@ $(document).ready(function()
         }
     }
 
-
     function displayforecastWeather()
     {
 
@@ -162,12 +170,13 @@ $(document).ready(function()
             var milliseconds = unixTimestamp * 1000;
             var localday = new Date(milliseconds);
             var displayday = localday.toLocaleString();
+            var fetchdate = displayday.split(' ')[0];
             var caseNo = i;
             console.log(caseNo , "- switch");
             switch (caseNo)
                 {
                 case 1:
-                    $("#dtForecast1").text(displayday);
+                    $("#dtForecast1").text(fetchdate);
                     console.log("display day's weather", displayday);
                     var weatherIcon = dayweather.icon[i];
                     $("#fcweatherCondition1").text("Weather Conditions: " + dayweather.conditions[i]).append(`<img src = "http://openweathermap.org/img/wn/${weatherIcon}.png">`);
@@ -213,7 +222,7 @@ $(document).ready(function()
                 break;
                 case 2:
 
-                    $("#dtForecast2").text(displayday);
+                    $("#dtForecast2").text(fetchdate);
                     console.log("display day's weather", displayday);
                     var weatherIcon = dayweather.icon[i];
                     $("#fcweatherCondition2").text("Weather Conditions: " + dayweather.conditions[i]).append(`<img src = "http://openweathermap.org/img/wn/${weatherIcon}.png">`);
@@ -258,7 +267,7 @@ $(document).ready(function()
                     }
                 break;
                 case 3:
-                    $("#dtForecast3").text(displayday);
+                    $("#dtForecast3").text(fetchdate);
                     console.log("display day's weather", displayday);
                     var weatherIcon = dayweather.icon[i];
                     $("#fcweatherCondition3").text("Weather Conditions: " + dayweather.conditions[i]).append(`<img src = "http://openweathermap.org/img/wn/${weatherIcon}.png">`);
@@ -303,7 +312,7 @@ $(document).ready(function()
                     }
                 break;
                 case 4:
-                    $("#dtForecast4").text(displayday);
+                    $("#dtForecast4").text(fetchdate);
                     console.log("display day's weather", displayday);
                     var weatherIcon = dayweather.icon[i];
                     $("#fcweatherCondition4").text("Weather Conditions: " + dayweather.conditions[i]).append(`<img src = "http://openweathermap.org/img/wn/${weatherIcon}.png">`);
@@ -348,7 +357,7 @@ $(document).ready(function()
                     }
                 break;
                 case 5:
-                    $("#dtForecast5").text(displayday);
+                    $("#dtForecast5").text(fetchdate);
                     console.log("display day's weather", displayday);
                     var weatherIcon = dayweather.icon[i];
                     $("#fcweatherCondition5").text("Weather Conditions: " + dayweather.conditions[i]).append(`<img src = "http://openweathermap.org/img/wn/${weatherIcon}.png">`);
@@ -531,5 +540,7 @@ $(document).ready(function()
     document.getElementById("linkcityName8").addEventListener("click",function(){getSavedlocation("8")}); 
     document.getElementById("linkcityName9").addEventListener("click",function(){getSavedlocation("9")}); 
     document.getElementById("searchLocation").addEventListener("click",function(){getLocation(locationEl)});
-
+    
+    $("#dayforecast").click(function() {
+        $(".view").toggle(50,"linear")});
 });
