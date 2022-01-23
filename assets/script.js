@@ -62,11 +62,8 @@ $(document).ready(function()
         .then(data => { 
             dayweather.longitude[0] = data ['coord']['lon'];
             dayweather.latitude[0] = data ['coord']['lat'];
-            console.log(dayweather.longitude[0]);
-            console.log(dayweather.latitude[0]);
             var cityLat = dayweather.latitude[0];
             var cityLong = dayweather.longitude[0];
-            console.log (cityLat, cityLong);
             var openweatherUrl="https://api.openweathermap.org/data/2.5/onecall?lat=" + dayweather.latitude[0] + "&lon=" + dayweather.longitude[0] + "&appid=" + apiKey + "&units=" + apiUnits + "&lang=" + apiLang;
             console.log(openweatherUrl);
             fetch( openweatherUrl)
@@ -89,7 +86,6 @@ $(document).ready(function()
                     dayweather.conditions[i] = data ['daily'][i]['weather'][0]['description'];
                     dayweather.icon[i] = data ['daily'][i]['weather'][0]['icon'];
                     dayweather.windspeed[i] = data ['daily'][i]['wind_speed'];
-                    console.log(dayweather);
                     displayWeather();
                     displayforecastWeather();
                 }
@@ -101,13 +97,9 @@ $(document).ready(function()
          //   return;
             
         })
-
     }
 
-    
-
     function displayWeather()
-    
     {
         var unixTimestamp = dayweather.day[0];
         var milliseconds = unixTimestamp * 1000;
@@ -221,7 +213,6 @@ $(document).ready(function()
                     }
                 break;
                 case 2:
-
                     $("#dtForecast2").text(fetchdate);
                     console.log("display day's weather", displayday);
                     var weatherIcon = dayweather.icon[i];
@@ -503,7 +494,6 @@ $(document).ready(function()
                 console.log("saved",save_cityName);
                 window.localStorage.setItem("save_cityName",JSON.stringify(save_cityName)); 
             }
-            
         }
         else
         {
@@ -525,7 +515,6 @@ $(document).ready(function()
     function getSavedlocation(param){
 
         innerLocation = save_cityName[param];
-        
         retrieveWeather(innerLocation);
     }
 

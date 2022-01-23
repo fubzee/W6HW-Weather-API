@@ -8,20 +8,14 @@
 body{
   background-color: var(--allbackground-color);
 }
-
-
-
 .resultContainer{
 
   box-shadow: 20px 20px 20 px gray;
   background-color: white;
-  
- 
 }
 
 .dtContainer{
 
-  
   background-color: #6495ED;
   color: white;
   text-align: center;
@@ -35,14 +29,11 @@ body{
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   text-indent: 10px;
-  
- 
 }
 
 .cityLinks{
   
   text-align: center;
-
 }
 
 .btn-primary{
@@ -55,7 +46,6 @@ body{
 footer {
   position: sticky;
   width: 100%;
-
   background-color: #6495ed;
   color:white;
   text-align: center;
