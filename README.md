@@ -12,7 +12,7 @@ When the location is entered, it is saved for later use and will trigger a call 
 
 ![image](https://user-images.githubusercontent.com/94102473/150674119-27efbce1-b64b-49ca-91c9-55df6314a7ee.png)
 
-When you enter the city and hit ### Search
+When you enter the city and hit ![image](https://user-images.githubusercontent.com/94102473/150675207-f08cecd4-08ad-47ac-88c3-1848b51068d3.png)
 
 1.  The current weather details for that city are returned
 
@@ -24,7 +24,7 @@ When you enter the city and hit ### Search
 
 ![image](https://user-images.githubusercontent.com/94102473/150674573-9b1b2a43-7252-4a30-bd24-9c3025f6a96f.png)
 
-3.  There is an option to view any future weather forecasts for the locations searched
+3.  There is an option to view any future weather forecasts for the locations searched ![image](https://user-images.githubusercontent.com/94102473/150675217-889b213a-dee0-44a5-a0be-b366927c0298.png)
 
 ![image](https://user-images.githubusercontent.com/94102473/150674661-bfdb385e-4512-4bc1-ab7a-cb12419e7270.png)
 
