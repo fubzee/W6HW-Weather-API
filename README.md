@@ -24,7 +24,8 @@ When you enter the city and hit ![image](https://user-images.githubusercontent.c
 
 ![image](https://user-images.githubusercontent.com/94102473/150674573-9b1b2a43-7252-4a30-bd24-9c3025f6a96f.png)
 
-3.  There is an option to view any future weather forecasts for the locations searched ![image](https://user-images.githubusercontent.com/94102473/150675217-889b213a-dee0-44a5-a0be-b366927c0298.png)
+3.  There is an option to view any future weather forecasts for the locations searched 
+![image](https://user-images.githubusercontent.com/94102473/150675217-889b213a-dee0-44a5-a0be-b366927c0298.png)
 
 ![image](https://user-images.githubusercontent.com/94102473/150674661-bfdb385e-4512-4bc1-ab7a-cb12419e7270.png)
 
