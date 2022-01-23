@@ -18,14 +18,14 @@ When you enter the city and hit ![image](https://user-images.githubusercontent.c
 
 ![image](https://user-images.githubusercontent.com/94102473/150674628-98bdcc17-dd51-42c8-908e-9bf3890ae628.png)
     
-    The UV index is colour coded in accordance with the EPA standard: ![image](https://user-images.githubusercontent.com/94102473/150675076-6283ac09-6cff-4bdf-96d8-c37dc275c444.png)
+The UV index is colour coded in accordance with the EPA standard:
+![image](https://user-images.githubusercontent.com/94102473/150675076-6283ac09-6cff-4bdf-96d8-c37dc275c444.png)
 
 2.  The SEARCHED location is automatically saved as a quick link for easy selection for any future searches (only the last 10 searches are returned to the user - this is to minimise a user building a long list of items for Searching - this is a deliberate design consideration)
 
 ![image](https://user-images.githubusercontent.com/94102473/150674573-9b1b2a43-7252-4a30-bd24-9c3025f6a96f.png)
 
-3.  There is an option to view any future weather forecasts for the locations searched 
-![image](https://user-images.githubusercontent.com/94102473/150675217-889b213a-dee0-44a5-a0be-b366927c0298.png)
+3.  There is an option to view any future weather forecasts for the locations searched ![image](https://user-images.githubusercontent.com/94102473/150675217-889b213a-dee0-44a5-a0be-b366927c0298.png)
 
 ![image](https://user-images.githubusercontent.com/94102473/150674661-bfdb385e-4512-4bc1-ab7a-cb12419e7270.png)
 
